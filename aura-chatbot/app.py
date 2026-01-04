@@ -7,12 +7,12 @@ from utils.orchestrator import Orchesterator
 
 
 st.set_page_config(
-    page_title="AURA AI Agronomist",
+    page_title="AURA AI",
     page_icon="🌱",
     layout="centered",
 )
 
-st.title("AURA AI Agronomist")
+st.title("AURA AI")
 st.caption("AI-powered crop diagnostics using rules, sensors, and knowledge base")
 
 
