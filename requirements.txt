@@ -4,6 +4,7 @@ seaborn
 matplotlib
 numpy
 pandas
+sentence-transformers
 langchain-core
 langchain-chroma
 langchain-huggingface
