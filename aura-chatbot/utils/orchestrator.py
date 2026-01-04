@@ -13,7 +13,7 @@ kb_retriever = KnowledgeBaseRetriever(base_retriever)
 
 level_2_chain = (
     {
-        "kb_context": RunnableLambda(kb_retriever.retrieve_kb_level_2),
+        "kb_context": RunnableLambda(kb_retriever.retrieve_kb),
         "farm_context": RunnableLambda(build_farm_context),
         "rule_context": RunnableLambda(build_rule_context),
         "question": RunnablePassthrough(),
@@ -24,7 +24,7 @@ level_2_chain = (
 
 level_1_chain = (
     {
-        "kb_context": RunnableLambda(kb_retriever.retrieve_kb_level_1),
+        "kb_context": RunnableLambda(kb_retriever.retrieve_kb),
         "question": RunnablePassthrough(),
     }
     | level_1_prompt
