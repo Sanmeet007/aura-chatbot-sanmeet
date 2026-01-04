@@ -72,10 +72,10 @@ The system provides farmers with clear, actionable insights about crop health an
 
    > You can get the API key from [https://console.groq.com/keys](https://console.groq.com/keys) after registering.
 
-4. **Navigate to the project directory**
+4. **Navigate to the project directory -> aura-ai**
 
    ```bash
-   cd aura-chatbot-sanmeet
+   cd aura-chatbot-sanmeet/arua-ai
    ```
 
 5. **Start the application**
