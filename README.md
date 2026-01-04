@@ -37,31 +37,48 @@ The system provides farmers with clear, actionable insights about crop health an
 - **Groq LLM API**
 - **Rule-based Expert System**
 
-## Launching AURA AI
+## Launching / Running AURA AI
 
-1. Clone this repository 
-    ```bash
-    git clone https://github.com/Sanmeet007/aura-chatbot-sanmeet.git
-    ```
+1. **Clone this repository**
 
-2. Install dependencies
+   ```bash
+   git clone https://github.com/Sanmeet007/aura-chatbot-sanmeet.git
+   ```
+
+2. **Install dependencies**
 
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Set environment variables
+3. **Set environment variables**
+
+   You can choose **either** of the following methods:
+
+   **Option A: Using `.env.local` (recommended)**
+
+   * Create a `.env.local` file inside the `aura-ai directory` (project root → aura-ai)
+   * Add your Groq API key:
+
+     ```env
+     GROQ_API_KEY="your_api_key"
+     ```
+
+   **Option B: Using command line**
 
    ```bash
-   GROQ_API_KEY=your_api_key
+   export GROQ_API_KEY=your_api_key
    ```
-    > You can get api key from `https://console.groq.com/keys` after registering
 
-4. Navigate to the `aura-chatbot` directory
+   > You can get the API key from [https://console.groq.com/keys](https://console.groq.com/keys) after registering.
+
+4. **Navigate to the project directory**
+
+   ```bash
+   cd aura-chatbot-sanmeet
    ```
-   cd aura-chatbot
-   ```
-5. Strt the app
+
+5. **Start the application**
 
    ```bash
    streamlit run app.py
