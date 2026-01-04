@@ -66,6 +66,22 @@ The system provides farmers with clear, actionable insights about crop health an
    ```bash
    streamlit run app.py
    ```
+## Working
+
+1. The user asks a question through the Streamlit chatbot interface.
+2. If no farm is connected, AURA AI uses **Level 1**:
+
+   * Retrieves relevant information from the agricultural knowledge base using **Chroma vector search**.
+   * Generates a general explanation using the LLM.
+3. If a farm is connected, AURA AI uses **Level 2**:
+
+   * The LLM first classifies the user's question into a **base symptom**.
+   * Live farm sensor data is fetched and evaluated using **rule-based diagnostic logic**.
+   * The rule engine identifies the most likely causes and corrective actions.
+   * The LLM then explains the diagnosis using sensor values, rules, and knowledge base context.
+4. The final response is displayed in the chat with clear diagnosis, evidence, and recommended actions.
+
+This hybrid approach ensures **accurate, explainable, and non-hallucinated responses**.
 
 ## Notes
 
