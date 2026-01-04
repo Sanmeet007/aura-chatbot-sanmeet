@@ -37,7 +37,7 @@ The system provides farmers with clear, actionable insights about crop health an
 - **Groq LLM API**
 - **Rule-based Expert System**
 
-## Run
+## Launching AURA AI
 
 1. Clone this repository 
     ```bash
