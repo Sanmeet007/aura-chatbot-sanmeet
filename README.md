@@ -83,6 +83,50 @@ The system provides farmers with clear, actionable insights about crop health an
 
 This hybrid approach ensures **accurate, explainable, and non-hallucinated responses**.
 
+
+## Test Cases
+
+### **Test Case 1: Level 1 – RAG System**
+
+**Question:**
+`Why is my lettuce growing slowly?`
+
+**Expected:**
+
+* Searches the vector database.
+* Retrieves relevant agricultural knowledge entries.
+* Uses the LLM to generate a natural language response.
+* Response mentions possible causes such as:
+
+  * Temperature
+  * Nutrient availability
+  * Light conditions
+
+### **Test Case 2: Level 2 – Rule-Based Diagnosis**
+
+**Farm:** `farm_102` (Low EC)
+**Question:**
+`Why is my lettuce yellowing?`
+
+**Expected:**
+
+* Identifies EC value (`0.8 mS/cm`) as below optimal range.
+* Diagnoses nutrient deficiency.
+* Suggests increasing nutrient concentration to correct EC levels.
+
+
+### **Test Case 3: Level Switching**
+
+1. Ask a question without connecting farm sensors.
+2. Observe a **Level 1** (knowledge-based) response.
+3. Connect farm sensors.
+4. Ask the same question again.
+
+**Expected:**
+
+* First response uses general knowledge (Level 1).
+* Second response uses live sensor data and rules (Level 2).
+
 ## Notes
 
 - Diagnostic accuracy is ensured using **explicit agronomy rules**.
