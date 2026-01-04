@@ -57,7 +57,7 @@ The system provides farmers with clear, actionable insights about crop health an
 
    **Option A: Using `.env.local` (recommended)**
 
-   * Create a `.env.local` file inside the `aura-ai directory` (project root → aura-ai)
+   * Create a `.env.local` file inside the `aura-ai directory` (project root → aura-chatbot)
    * Add your Groq API key:
 
      ```env
@@ -72,10 +72,10 @@ The system provides farmers with clear, actionable insights about crop health an
 
    > You can get the API key from [https://console.groq.com/keys](https://console.groq.com/keys) after registering.
 
-4. **Navigate to the project directory -> aura-ai**
+4. **Navigate to the project directory -> aura-chatbot**
 
    ```bash
-   cd aura-chatbot-sanmeet/arua-ai
+   cd aura-chatbot-sanmeet/aura-chatbot
    ```
 
 5. **Start the application**
